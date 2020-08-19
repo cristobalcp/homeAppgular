@@ -1,7 +1,7 @@
-<div class="container fixed-bottom colorBody1">
+<div class="container fixed-bottom colorFooter27">
     <div class="container text-center colorNavbar2">
 
-        <button (click)="privacidad()" type="button" class="btn btn-warning btn-sm cookies8 mt-n1">
+        <button (click)="privacidad()" type="button" class="btn btn-sm cookies8 mt-n1">
             <u>Política de privacidad y cookies</u>
         </button>
         <div class="row">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <p class="mb-1">
-            <small class="text-muted colorName3">
+            <small class="text-muted">
                 Copyright &copy;&nbsp;Cristóbal Cenalmor Pérez-Lago ({{year}})&nbsp;Todos los derechos reservados
             </small>
         </p>
@@ -41,7 +41,7 @@
         <div class="modal-content colorModal11">
             <div class="container backModal12">
                 <div class="modal-body text-center colorTexto10">
-                    <h4 class="colorName3 text-uppercase mb-4">
+                    <h4 class="colorTexto10 text-uppercase mb-4">
                         <u>Política de Privacidad y Cookies</u>
                     </h4>
                     <p class="font-weight-light text-justify">
@@ -52,11 +52,11 @@
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                     <div class="container text-center">
-                        <button *ngIf="modalService.privacidad" (click)="salir()" class="btn btn-outline-warning colorName3"
+                        <button *ngIf="modalService.privacidad" (click)="salir()" class="btn btn-outline-warning colorTexto10"
                           type="button">
                           <i class="fas fa-check"></i>
                         </button>
-                        <button *ngIf="!modalService.privacidad" (click)="irAlerta()" class="btn btn-outline-warning colorName3"
+                        <button *ngIf="!modalService.privacidad" (click)="irAlerta()" class="btn btn-outline-warning colorTexto10"
                           type="button">
                           <i class="fas fa-check"></i>
                         </button>
