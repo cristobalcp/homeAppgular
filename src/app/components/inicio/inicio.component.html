@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-uppercase font-weight-bold text-left">
+                <span class="badge badge-warning">Un poco sobre mí</span>
+            </h3>
+            <div class="container mt-3">
+                <div class="container backPortada18">
+                    <div class="card backSobreMi19">
+                        <div class="row no-gutters">
+                            <div class="col-md-4 backYo21 mt-1 text-center">
+                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" src="../../../assets/img/img1.png"
+                                    class=" card-img cursor7 padin20" width="300" height="300">
+                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" src="../../../assets/img/img3.jpg"
+                                    class="card-img cursor7 padin20" width="300" height="300">
+                            </div>
+
+                            <div class="col-md-4 text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title backTitulo22 mt-1">Cristóbal Cenalmor Pérez-Lago
+                                    </h5>
+                                    <p class="card-text">
+                                        Desarrollador Web
+                                    </p>
+                                    <div (click)="tecnologias()" class="container backTec23 cursor7">
+                                        <p class="colorName3">
+                                            <span class="badge badge-warning text-uppercase">tecnologías
+                                                destacadas</span>
+                                        </p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <img src="../../../assets/img/angular.png" class="tamanoTec24">
+                                                <h6 class="mt-0 mb-1"><small class="colorTec25 text-uppercase">
+                                                        <strong>Angular</strong>
+                                                    </small></h6>
+                                            </div>
+                                            <div class="col">
+                                                <img src="../../../assets/img/firebase.png" class="tamanoTec24">
+                                                <h6 class="mt-0 mb-1"><small class="colorTec25 text-uppercase">
+                                                        <strong>Firebase</strong>
+                                                    </small></h6>
+                                            </div>
+                                            <div class="col">
+                                                <img src="../../../assets/img/boot.png" class="tamanoTec24">
+                                                <h6 class="mt-0 mb-1"><small class="colorTec25 text-uppercase">
+                                                        <strong>Bootstrap</strong>
+                                                    </small></h6>
+                                            </div>
+                                            <div class="col">
+                                                <img src="../../../assets/img/git.png" class="tamanoTec24">
+                                                <h6 class="mt-0 mb-1"><small class="colorTec25 text-uppercase">
+                                                        <strong>Git</strong>
+                                                    </small></h6>
+                                            </div>
+                                            <div class="col">
+                                                <img src="../../../assets/img/python.png" class="tamanoTec24">
+                                                <h6 class="mt-0 mb-1"><small class="colorTec25 text-uppercase">
+                                                        <strong>Python</strong>
+                                                    </small></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-warning btn-sm mt-4">
+                                        <span class="badge badge-warning">Leer más</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 backYo21 mt-1 text-center">
+                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" src="../../../assets/img/img2.png"
+                                    class="card-img cursor7 padin20" width="300" height="300">
+                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" src="../../../assets/img/img4.png"
+                                    class="card-img cursor7 padin20" width="300" height="300">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Permite llamar a la ventana modal -->
+    <app-modals></app-modals>

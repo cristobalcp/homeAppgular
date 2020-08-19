@@ -1,1 +1,229 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: rgb(23, 191, 99);
+  --main-color-low: rgba(23, 191, 99, 0.5);
+  --main-color-extra-low: rgba(23, 191, 99, 0.2);
+  --main-bg-color: rgb(21, 32, 43);
+  --font-color: rgb(194, 194, 194);
+}
+body {
+  /* background-image: url('./assets/img/fondo1.jpg'); */
+  background-color: var(--main-bg-color);
+  margin-top: 100px;
+  margin-bottom: 110px;
+  min-height: 500px;
+}
+
+html {
+  font-size: 13px;
+}
+.container {
+  max-width: 100vw;
+}
+
+.fa-whatsapp {
+  color: #25d366;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-envelope {
+  color: orangered !important;
+}
+.fa-linkedin-in {
+  color: #0e76a8;
+}
+.fa-instagram {
+  color: #c13584 !important;
+}
+.fa-twitter {
+  color: #00acee;
+}
+.fa-at,
+.fa-comment {
+  color: var(--main-color-low) !important;
+}
+
+.badge-warning,
+.btn-warning{
+  background-color: var(--main-color) !important;
+}
+
+.btn-outline-warning {
+  border-color: var(--main-color) !important;
+  color: var(--main-color);
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--main-color-low) !important;
+}
+.tooltip-inner {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-color) !important;
+}
+.form-control:focus {
+  background-color: transparent;
+  border-color: var(--main-color) !important;
+  box-shadow: 0 0 0 0.2rem var(--main-color-low) !important;
+}
+.active {
+  background-color: var(--main-color-low);
+  font-weight: bolder;
+}
+.mt-n1 {
+  margin-top: -1.2rem !important;
+}
+
+.colorBody1 {
+  background-color: var(--main-color) !important;
+  border: 2px solid black !important;
+}
+
+.colorNavbar2 {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  margin: 5px;
+  padding: 0px;
+}
+
+.colorName3 {
+  color: var(--main-color) !important;
+}
+
+.colorName4 {
+  color: var(--main-color) !important;
+  text-shadow: 2px 2px 4px rgb(83, 83, 8);
+}
+
+.margin5 {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.federica6 {
+  font-size: 20px !important;
+}
+
+.cursor7 {
+  cursor: pointer;
+}
+
+.cookies8 {
+  background-color: var(--main-color) !important;
+  color: var(--main-bg-color) !important;
+  height: 22px !important;
+  border: var(--main-color);
+}
+.cookies8:hover {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-color) !important;
+  border-top-style: none !important;
+  border: 1px dotted var(--main-color);
+}
+
+.back9 {
+  background-color: var(--main-bg-color) !important;
+  color: var(--main-color) !important;
+}
+
+.colorTexto10 {
+  color: var(--font-color);
+}
+
+.colorModal11 {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-color-low);
+  border-radius: 2px;
+  padding: 20px !important;
+}
+
+.backModal12 {
+  background-color: var(--main-bg-color);
+  color: var(--main-color) !important;
+  border: 10px inset var(--main-color);
+}
+
+.backContacto13 {
+  background-color: var(--main-bg-color) !important;
+  border: 1px solid var(--main-color-low);
+}
+
+.backInput14 {
+  background-color: var(--main-bg-color) !important;
+  border: 1px solid var(--main-color);
+  color: var(--font-color) !important;
+  text-align: left;
+}
+.backInput15 {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color);
+  color: var(--main-color) !important;
+  text-align: center;
+}
+
+.colorNegro16 {
+  /* En producción transparente */
+  color: var(--main-color);
+}
+
+.backInput17 {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color);
+  color: var(--font-color) !important;
+  text-align: center;
+}
+
+.backPortada18 {
+  color: var(--main-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.backSobreMi19 {
+  background-color: var(--main-bg-color);
+  border: 3px solid var(--main-color-extra-low);
+  border-radius: 1.2rem;
+  padding: 1rem;
+}
+
+.padin20 {
+  padding: 5px;
+  border: 2px solid var(--main-color-extra-low);
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.backYo21 {
+  border: 5px solid var(--main-bg-color);
+}
+
+.backTitulo22 {
+  color: var(--main-color);
+  border: 1px inset var(--main-color);
+  border-radius: 5px;
+}
+
+.backTec23 {
+  background-color: var(--main-color-extra-low)  ;
+  border: 2px groove var(--main-color);
+}
+
+.tamanoTec24 {
+  width: 30px;
+  height: 30px;
+}
+
+.tamanoTec24:hover {
+  border: 3px solid transparent;
+}
+
+.colorTec25 {
+  background-color: transparent  !important;
+  color: var(--main-color);
+}
+
+
+.tamanoSalir26 {
+  width: 25% !important;
+  color: var(--main-color) !important;
+}

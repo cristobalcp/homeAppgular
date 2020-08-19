@@ -1,0 +1,80 @@
+<!-- Modal Tecnologías-->
+<div class="modal fade mt-5 py-5" id="modalTecnologias" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content colorModal11">
+
+            <div class="container backModal12">
+
+                <div class="modal-body text-center colorName3">
+                    <h2> <u class="text-capitalize">Formación tecnológica</u></h2><br>
+
+                    <div class="btn-group btn-group-toggle text-center">
+                        <label (click)="pagina1()" [ngClass]="clase1" class="cursor7 btn-sm mr-2">
+                            1
+                        </label>
+                        <label (click)="pagina2()" [ngClass]="clase2" class="cursor7 btn-sm mr-2">
+                            2
+                        </label>
+                        <label (click)="pagina3()" [ngClass]="clase3" class="cursor7 btn-sm">
+                            3
+                        </label>
+                    </div>
+
+                    <div *ngIf="mostrar1" class="container colorTexto10">
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-angular fa-lg mr-3"></i>
+                            <span class="mr-2">Angular 9:</span>
+                            <small>Empezando a aprender Angular.</small>
+                        </p>
+                        <p class="font-weight-light text-justify">
+                            <i class="fas fa-fire fa-lg mr-3"></i>
+                            <span class="mr-2">Firebase:</span>
+                            <small>Manejo y conocimento intermedio de la plataforma.</small>
+                        </p>
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-bootstrap fa-lg mr-3"></i>
+                            <span class="mr-2">Bootstrap 4:</span>
+                            <small>Manejo casi completo del framework.</small>
+                        </p>
+                    </div>
+
+                    <div *ngIf="mostrar2" class="container colorTexto10">
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-git-alt fa-lg mr-3"></i>
+                            <span class="mr-2">Git:</span>
+                            <small>Ocho meses de experiencia y uso diario.</small>
+                        </p>
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-github fa-lg mr-3"></i>
+                            <span class="mr-2">GitHub/Gitlab:</span>
+                                <small>Manejo de ambas a la perfección.</small>
+                        </p>
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-python fa-lg mr-3"></i>
+                            <span class="mr-2">Python 3:</span>
+                            <small>Ocho meses de experiencia profesional.</small>
+                        </p>
+                    </div>
+
+                    <div *ngIf="mostrar3" class="container colorTexto10">
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-google fa-lg mr-3"></i>
+                            <span class="mr-2">Google Cloud:</span>
+                            <small>En proceso de aprender.</small>
+                        </p>
+                        <p class="font-weight-light text-justify">
+                            <i class="fab fa-node-js fa-lg mr-3"></i>
+                            <span class="mr-2">Ideas futuras:</span>
+                            <small>NodeJS, MongoDB, IA, ML...</small>
+                        </p>
+                    </div>
+
+                    <hr> <button (click)="cerrarTec()" type="button"
+                        class="btn btn-outline-warning btn-sm tamanoSalir26">Salir</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

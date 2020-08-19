@@ -1,0 +1,68 @@
+<div class="container fixed-bottom colorBody1">
+    <div class="container text-center colorNavbar2">
+
+        <button (click)="privacidad()" type="button" class="btn btn-warning btn-sm cookies8 mt-n1">
+            <u>Política de privacidad y cookies</u>
+        </button>
+        <div class="row">
+            <div class="col">
+                <a (click)="whatsApp()" class="cursor7">
+                    <i class="fab fa-whatsapp mr-3 ml-3"></i>
+                </a>
+                <a href="https://www.facebook.com/cristobal.cenalmorperezlago/" target="_blank">
+                    <i class="fab fa-facebook mr-3"></i>
+                </a>
+                <a href="mailto:cr2.cristobal@gmail.com" target="_blank">
+                    <i class="fas fa-envelope mr-3"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/cristobal-cenalmor-p%C3%A9rez-lago-07158b198/" target="_blank">
+                    <i class="fab fa-linkedin-in mr-3"></i>
+                </a>
+                <a href="https://www.instagram.com/cristobalcpl_98/" target="_blank">
+                    <i class="fab fa-instagram mr-3"></i>
+                </a>
+                <a href="https://twitter.com/cristobalcpl" target="_blank">
+                    <i class="fab fa-twitter mr-3"></i>
+                </a>
+            </div>
+        </div>
+        <p class="mb-1">
+            <small class="text-muted colorName3">
+                Copyright &copy;&nbsp;Cristóbal Cenalmor Pérez-Lago ({{year}})&nbsp;Todos los derechos reservados
+            </small>
+        </p>
+    </div>
+</div>
+
+<!-- Modal Privacidad Cookies -->
+<div class="modal fade mt-5 py-5" id="privacidad" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content colorModal11">
+            <div class="container backModal12">
+                <div class="modal-body text-center colorTexto10">
+                    <h4 class="colorName3 text-uppercase mb-4">
+                        <u>Política de Privacidad y Cookies</u>
+                    </h4>
+                    <p class="font-weight-light text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="container text-center">
+                        <button *ngIf="modalService.privacidad" (click)="salir()" class="btn btn-outline-warning colorName3"
+                          type="button">
+                          <i class="fas fa-check"></i>
+                        </button>
+                        <button *ngIf="!modalService.privacidad" (click)="irAlerta()" class="btn btn-outline-warning colorName3"
+                          type="button">
+                          <i class="fas fa-check"></i>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
