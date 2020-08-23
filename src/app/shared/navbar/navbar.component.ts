@@ -39,7 +39,6 @@ export class NavbarComponent implements OnInit {
     this.ojo = !this.ojo;
     this.login1 = !this.login1;
     this.modalService.ojo2 = false;
-    console.log(this.login1)
 
     $(() => { $('[data-toggle="tooltip"]').tooltip(); });
   }

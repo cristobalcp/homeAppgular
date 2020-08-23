@@ -10,18 +10,18 @@
                     <h2> <u class="text-capitalize">Formación tecnológica</u></h2><br>
 
                     <div class="btn-group btn-group-toggle text-center">
-                        <label (click)="pagina1()" [ngClass]="clase1" class="cursor7 btn-sm mr-2">
+                        <label (click)="pagina1()" [ngClass]="modalService.clase1" class="cursor7 btn-sm mr-2">
                             1
                         </label>
-                        <label (click)="pagina2()" [ngClass]="clase2" class="cursor7 btn-sm mr-2">
+                        <label (click)="pagina2()" [ngClass]="modalService.clase2" class="cursor7 btn-sm mr-2">
                             2
                         </label>
-                        <label (click)="pagina3()" [ngClass]="clase3" class="cursor7 btn-sm">
+                        <label (click)="pagina3()" [ngClass]="modalService.clase3" class="cursor7 btn-sm">
                             3
                         </label>
                     </div>
 
-                    <div *ngIf="mostrar1" class="container colorTexto10">
+                    <div *ngIf="modalService.mostrar1" class="container colorTexto10">
                         <p class="font-weight-light text-justify">
                             <i class="fab fa-angular fa-lg mr-3"></i>
                             <span class="mr-2">Angular 9:</span>
@@ -39,7 +39,7 @@
                         </p>
                     </div>
 
-                    <div *ngIf="mostrar2" class="container colorTexto10">
+                    <div *ngIf="modalService.mostrar2" class="container colorTexto10">
                         <p class="font-weight-light text-justify">
                             <i class="fab fa-git-alt fa-lg mr-3"></i>
                             <span class="mr-2">Git:</span>
@@ -57,7 +57,7 @@
                         </p>
                     </div>
 
-                    <div *ngIf="mostrar3" class="container colorTexto10">
+                    <div *ngIf="modalService.mostrar3" class="container colorTexto10">
                         <p class="font-weight-light text-justify">
                             <i class="fab fa-google fa-lg mr-3"></i>
                             <span class="mr-2">Google Cloud:</span>
@@ -77,4 +77,39 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal Sobre Mí-->
+<div class="modal fade mt-5 py-5" id="sobreMi" data-backdrop="static" tabindex="-1" role="dialog"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content colorModal11">
+      <div class="container backModal12">
+        <div class="modal-body text-center colorTexto10">
+          <h2> <u class="text-capitalize">Cristóbal Cenalmor Pérez-Lago</u></h2><br>
+          <p class="font-weight-light text-justify colorTexto10 tab29">
+            Nacido el 4 de Agosto de 1998 en el hospital Maternidad HM Belén (A Coruña). A los tres años comenzó sus estudios básicos
+            en el colegio Discípulas de Jesús Maestro, en Ferrol, ciudad en la que pasó toda su infancia y su juventud hasta 
+            la actualidad.
+        </p>
+          <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
+            Tras acabar sus estudios básicos, cursó el bachillerato en el instituto Sansaturnino Montojo, realizó la selectividad y se matriculó en Ingeniería Industrial Automática en la UDC. Después de un año de 
+            altibajos decició finalizar temporalmente sus estudios universitarios.
+          </p>
+          <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
+            Cursó con éxito el ciclo superior de DAM convirtiéndose así en el año 2020 en Técnico Superior en Desarrollo de Aplicaciones 
+            Multiplataforma y fue contratado por la consultora tecnológica ArtabroTech S.L. donde actualmente desarrolla su 
+            carrera profesional.
+          </p>
+          <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
+            En un futuro tiene intención de retomar sus estudios de Ingeniería, esta vez en Tecnologías Industriales debido a 
+            su creciente interés por el conocimiento y más específicamente por la Industria 4.0 y todo lo que la rodea.
+          </p>
+          <hr>
+          <button (click)="cerrarSobreMi()" type="button"
+            class="btn btn-outline-warning tamanoSalir26 btn-sm">Salir</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

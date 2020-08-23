@@ -30,15 +30,12 @@ export class ModalsComponent implements OnInit {
   politicaPrivacidad() {
     this.modalService.politicaPrivacidad();
   }
-
   cambioPrivacidad() {
     this.modalService.cambioPrivacidad();
   }
-
   contacto() {
     this.modalService.contacto();
   }
-
   contactoCristobal(f: NgForm) {
     this.limpiarMensaje();
     $('#contacto').modal('hide');
@@ -74,12 +71,10 @@ export class ModalsComponent implements OnInit {
       });
     }
   }
-
   limpiarMensaje() {
     this.mensaje.email = "";
     this.mensaje.mensaje = "";
   }
-
   login(forma: NgForm) {
 
     if (this.usuarioLogin.nombre === 'cristobalcpl' && this.usuarioLogin.password === '123') {
@@ -120,11 +115,9 @@ export class ModalsComponent implements OnInit {
     $('.navbar-collapse').collapse('hide');
     this.limpiarUsuario();
   }
-
   salirLogin(){
     $('#loginModal').modal('hide');
   }
-
   limpiarUsuario() {
     this.usuarioLogin.nombre = "";
     this.usuarioLogin.password = "";

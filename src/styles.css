@@ -63,8 +63,8 @@ html {
   background-color: var(--main-color-low) !important;
 }
 .tooltip-inner {
-  background-color: var(--main-bg-color) !important;
-  color: var(--main-color) !important;
+  background-color: var(--main-color) !important;
+  color: var(--main-bg-color) !important;
 }
 .form-control:focus {
   background-color: var(--main-bg-color);
@@ -222,7 +222,6 @@ html {
   color: var(--main-color);
 }
 
-
 .tamanoSalir26 {
   width: 25% !important;
   color: var(--main-color) !important;
@@ -232,6 +231,60 @@ html {
   background-color: var(--main-bg-color);
   color: var(--main-color);
 }
+
 .boldTexto28{
   font-weight: 800;
+}
+
+.tab29 {
+  text-indent: 1.5em;
+}
+
+.backUltimas30 {
+  background-color:  var(--main-color-extra-low) !important;
+  color: var(--main-color);
+  border: 1px inset var(--main-color);
+  border-radius: 10px;
+}
+
+.tamanoYo31 {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .tamanoYo31 {
+  width: 30px;
+  height: 30px;
+ }
+ .colorNoti33, .font-weight-normal {
+  font-size: 12px !important;
+}
+}
+
+.backImgNoti32 {
+  border: 1px solid var(--main-color-extra-low);
+}
+
+.colorNoti33 {
+  color: var(--main-color-low) !important;
+  font-size: 12.5px;
+}
+
+.backNoti34 {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-color-extra-low);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.backNoti34:hover {
+  background-color: var(--main-bg-color-low);
+  border: 2px solid  var(--main-color-low);
+}
+
+.backTituloNoti35 {
+  background-color: var(--main-bg-color-extra-low);
+  color: var(--main-color);
+  font-weight: bold;
 }
