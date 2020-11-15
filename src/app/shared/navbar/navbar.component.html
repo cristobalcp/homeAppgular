@@ -1,5 +1,5 @@
-<div class="container fixed-top colorBody1">
-    <nav class="navbar navbar-expand-lg navbar-light colorNavbar2 mt-1">
+<div class="container fixed-top colorBody1 mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark colorNavbar2 mt-1">
         <a *ngIf="!modalService.online && modalService.ojo2" class="navbar-brand ml-3">
             <img *ngIf="ojo" (click)="onClick()" src="../../../assets/img/ojo.png" width="40" height="40"
                 loading="lazy">
@@ -7,8 +7,7 @@
                 loading="lazy">
         </a>
         <a *ngIf="modalService.online || !modalService.ojo2" class="navbar-brand ml-3">
-            <img src="../../../assets/img/ojo.png" width="40" height="40"
-                loading="lazy">
+            <img src="../../../assets/img/ojo.png" width="40" height="40" loading="lazy">
         </a>
         <a class="navbar-brand colorName4 ml-3">
             <strong class="text-uppercase cristobal6"> CristobalDJ</strong>
@@ -16,53 +15,54 @@
         <button class="navbar-toggler colorBody1 mr-3" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <mat-icon class="colorName3">menu</mat-icon>
         </button>
         <div class="container text-justify ml-5 mr-5">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item mr-1 ml-1" routerLinkActive="active">
-                        <a (click)="cerrarNavbar()" class="nav-link colorName3" [routerLink]="['/inicio']">Inicio</a>
+                        <a mat-button (click)="cerrarNavbar()" class="nav-link colorName3"
+                            [routerLink]="['/inicio']">Inicio</a>
                     </li>
-                    <li class="nav-item mr-1 ml-1" routerLinkActive="active">
-                        <a (click)="cerrarNavbar()" class="nav-link colorName3"
-                            [routerLink]="['/noticias']">Noticias</a>
+                    <li *ngIf="this.userService.auth" class="nav-item mr-1 ml-1" routerLinkActive="active">
+                        <a mat-button (click)="cerrarNavbar()" class="nav-link colorName3"
+                            [routerLink]="['/mensajes']">Mensajes
+                            <span class="ml-1">({{ totalMessages }})</span>
+                        </a>
                     </li>
-                    <li class="nav-item mr-1 ml-1" routerLinkActive="active">
-                        <a (click)="cerrarNavbar()" class="nav-link colorName3"
-                            [routerLink]="['/noticiaCompleta']">Noticia Completa</a>
-                    </li>
-                    <li class="nav-item mr-1 ml-1" routerLinkActive="active">
-                        <a (click)="cerrarNavbar()" class="nav-link colorName3"
-                            [routerLink]="['/mensajes']">Mensajes</a>
-                    </li>
-                    <li class="nav-item mr-1 ml-1" routerLinkActive="active">
-                        <a (click)="cerrarNavbar()" class="nav-link colorName3" [routerLink]="['/ajustes']">Ajustes</a>
+                    <li *ngIf="this.userService.auth" class="nav-item mr-1 ml-4" routerLinkActive="active">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input id="video_url" class="form-control mr-sm-2" style="width: 300px;" type="search"
+                                placeholder="Youtube URL" aria-label="Search">
+                            <button mat-button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"
+                                (click)="video()" title="Descarga una canción de Youtube"><span class="material-icons">library_music</span></button>
+                        </form>
                     </li>
                 </ul>
-                <div class="text-center mr-5 ml-5">
-                    <button *ngIf="login1" (click)="entrar()" class="btn colorNegro16">
+                <div class="text-center mr-5 ml-5 d-flex">
+                    <button *ngIf="login1" (click)="entrar()" class="btn colorNegro16 test1">
                         <i class="fas fa-sign-in-alt fa-lg" data-toggle="tooltip" data-placement="left"
                             title="Admin login"></i>
                     </button>
-
                     <div (keyup.enter)="inputLogin()" *ngIf="input1" class="input-group-sm">
                         <input type="password" id="focusClave" [(ngModel)]="clave" name="clave"
-                            placeholder="Press enter" class="form-control backInput15"
+                            placeholder="Press enter" class="form-control backInput15 test"
                             aria-describedby="inputGroup-sizzing-sm">
                     </div>
                     <button (click)="logOut()" *ngIf="modalService.online" class="btn colorNegro16 cursor7 mr-4">
                         <i class="fas fa-sign-out-alt fa-lg colorName3"></i>
                     </button>
-                    <button  (click)="cerrarNavbar()" *ngIf="modalService.online" class="btn colorNegro16 mr-4">
-                        <i class="fas fa-wifi fa-lg colorName3"></i>
+                    <button *ngIf="this.userService.auth" (click)="cerrarNavbar()" class="btn colorNegro16 mr-4">
+                        <a mat-button (click)="cerrarNavbar()" class="nav-link colorName3"
+                            [routerLink]="['/ajustes']"><i class="fas fa-user-cog ml-1"></i>
+                        </a>
                     </button>
                 </div>
                 <div class="row">
                     <div class="col text-center">
                         <p class="m-2">
-                            <button (click)="alerta()" class="btn btn-outline-warning my-2" type="button">
-                                <span class="colorName3 text-uppercase">Contacto</span>
+                            <button mat-icon-button aria-label="Contáctanos" (click)="alerta()">
+                                <mat-icon class="colorName3">send</mat-icon>
                             </button>
                         </p>
                     </div>

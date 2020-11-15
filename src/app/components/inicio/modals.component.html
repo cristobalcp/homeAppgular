@@ -22,51 +22,26 @@
                     </div>
 
                     <div *ngIf="modalService.mostrar1" class="container colorTexto10">
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-angular fa-lg mr-3"></i>
-                            <span class="mr-2">Angular 9:</span>
-                            <small>Empezando a aprender Angular.</small>
-                        </p>
-                        <p class="font-weight-light text-justify">
-                            <i class="fas fa-fire fa-lg mr-3"></i>
-                            <span class="mr-2">Firebase:</span>
-                            <small>Manejo y conocimento intermedio de la plataforma.</small>
-                        </p>
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-bootstrap fa-lg mr-3"></i>
-                            <span class="mr-2">Bootstrap 4:</span>
-                            <small>Manejo casi completo del framework.</small>
+                        <p *ngFor="let tec of techUser.slice(0, 3)" class="font-weight-light text-justify">
+                            <i [class]="tec.icon"></i>
+                            <span class="mr-2">{{ tec.technology }}:</span>
+                            <small>{{ tec.experience }}</small>
                         </p>
                     </div>
 
                     <div *ngIf="modalService.mostrar2" class="container colorTexto10">
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-git-alt fa-lg mr-3"></i>
-                            <span class="mr-2">Git:</span>
-                            <small>Ocho meses de experiencia y uso diario.</small>
-                        </p>
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-github fa-lg mr-3"></i>
-                            <span class="mr-2">GitHub/Gitlab:</span>
-                                <small>Manejo de ambas a la perfección.</small>
-                        </p>
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-python fa-lg mr-3"></i>
-                            <span class="mr-2">Python 3:</span>
-                            <small>Ocho meses de experiencia profesional.</small>
+                        <p *ngFor="let tec of techUser.slice(3, 6)" class="font-weight-light text-justify">
+                            <i [class]="tec.icon"></i>
+                            <span class="mr-2">{{ tec.technology }}:</span>
+                            <small>{{ tec.experience }}</small>
                         </p>
                     </div>
 
                     <div *ngIf="modalService.mostrar3" class="container colorTexto10">
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-google fa-lg mr-3"></i>
-                            <span class="mr-2">Google Cloud:</span>
-                            <small>En proceso de aprender.</small>
-                        </p>
-                        <p class="font-weight-light text-justify">
-                            <i class="fab fa-node-js fa-lg mr-3"></i>
-                            <span class="mr-2">Ideas futuras:</span>
-                            <small>NodeJS, MongoDB, IA, ML...</small>
+                        <p *ngFor="let tec of techUser.slice(6)" class="font-weight-light text-justify">
+                            <i [class]="tec.icon"></i>
+                            <span class="mr-2">{{ tec.technology }}:</span>
+                            <small>{{ tec.experience }}</small>
                         </p>
                     </div>
 
@@ -85,25 +60,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content colorModal11">
       <div class="container backModal12">
-        <div class="modal-body text-center colorTexto10">
-          <h2> <u class="text-capitalize">Cristóbal Cenalmor Pérez-Lago</u></h2><br>
+        <div *ngFor="let about of aboutMe" class="modal-body text-center colorTexto10">
+          <h2> <u class="text-capitalize">{{ about.title }}</u></h2><br>
           <p class="font-weight-light text-justify colorTexto10 tab29">
-            Nacido el 4 de Agosto de 1998 en el hospital Maternidad HM Belén (A Coruña). A los tres años comenzó sus estudios básicos
-            en el colegio Discípulas de Jesús Maestro, en Ferrol, ciudad en la que pasó toda su infancia y su juventud hasta 
-            la actualidad.
+            {{ about.paragraph1 }}
         </p>
           <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
-            Tras acabar sus estudios básicos, cursó el bachillerato en el instituto Sansaturnino Montojo, realizó la selectividad y se matriculó en Ingeniería Industrial Automática en la UDC. Después de un año de 
-            altibajos decició finalizar temporalmente sus estudios universitarios.
+            {{ about.paragraph2 }}
           </p>
           <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
-            Cursó con éxito el ciclo superior de DAM convirtiéndose así en el año 2020 en Técnico Superior en Desarrollo de Aplicaciones 
-            Multiplataforma y fue contratado por la consultora tecnológica ArtabroTech S.L. donde actualmente desarrolla su 
-            carrera profesional.
+            {{ about.paragraph3 }}
           </p>
           <p class="font-weight-light text-justify mt-2 colorTexto10 tab29">
-            En un futuro tiene intención de retomar sus estudios de Ingeniería, esta vez en Tecnologías Industriales debido a 
-            su creciente interés por el conocimiento y más específicamente por la Industria 4.0 y todo lo que la rodea.
+            {{ about.paragraph4 }}
           </p>
           <hr>
           <button (click)="cerrarSobreMi()" type="button"

@@ -1,1 +1,48 @@
-<p>noticia-completa works!</p>
+<div class="container marginContainer49">
+    <h3 class="text-uppercase font-weight-bold text-center">
+        <span class="colorTexto10">{{ noticiasService.noticiaSel.title }}</span>
+    </h3>
+
+    <div class="container mt-3">
+        <div class="container backPaginaNoticias36">
+            <div class="card backNoticiaCompleta44 text-center">
+
+                <h5 class="card-title backNoticiaCompleta45">{{ noticiasService.noticiaSel.subtitle }}
+                </h5>
+
+                <img [src]="noticiasService.noticiaSel.img_new | imgNew" class="card-img img-fluid">
+
+                <div class="card-body text-justify">
+
+                    <p class="card-text colorNoti33 tab29">
+                        {{ noticiasService.noticiaSel.paragraph1 }}
+                    </p>
+                    <p class="card-text colorNoti33 tab29">
+                        {{ noticiasService.noticiaSel.paragraph2 }}
+                    </p>
+                    <p class="card-text colorNoti33 tab29">
+                        {{ noticiasService.noticiaSel.paragraph3 }}
+                    </p>
+                    <p class="card-text colorNoti33 tab29">
+                        {{ noticiasService.noticiaSel.paragraph4 }}
+                    </p>
+                    <div class="text-center">
+                        <span (click)="back()"><i class="fas fa-arrow-alt-circle-left fa-2x cursor7"></i></span>
+                    </div>
+                </div>
+                <div class="container text-center backPaginaNoticiaCompleta46">
+                    <p class="card-text"><span class="backPlus39">
+                            <img [src]="noticiasService.noticiaSel.img_author | imgAuthor" class="tamanoYo31 backImgNoti32 rounded-circle mr-2">
+                        </span>
+                        <span class="mr-2">
+                            <u>{{ noticiasService.noticiaSel.author }}</u>
+                        </span>
+                        <span>
+                            <small class="colorTexto40">{{ noticiasService.noticiaSel.created | date: "fullDate" }}                            </small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

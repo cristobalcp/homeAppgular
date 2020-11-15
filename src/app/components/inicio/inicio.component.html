@@ -1,17 +1,18 @@
-<div class="container">
+<div class="container marginContainer49">
     <div class="row">
         <div class="col-12">
             <h3 class="text-uppercase font-weight-bold text-left">
-                <span class="colorTexto10">Un poco sobre mí</span>
+                <span class="colorTexto10" (click)="getAllVideos()">Un poco sobre mí 
+                </span>
             </h3>
             <div class="container mt-3">
                 <div class="container backPortada18">
                     <div class="card backSobreMi19">
                         <div class="row no-gutters">
                             <div class="col-md-4 backYo21 mt-1 text-center">
-                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" src="../../../assets/img/img1.png"
+                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" [src]="images.img[0]"
                                     class=" card-img cursor7 padin20" width="300" height="300">
-                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" src="../../../assets/img/img3.jpg"
+                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" [src]="images.img[1]"
                                     class="card-img cursor7 padin20" width="300" height="300">
                             </div>
 
@@ -67,9 +68,9 @@
                             </div>
 
                             <div class="col-md-4 backYo21 mt-1 text-center">
-                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" src="../../../assets/img/img2.png"
+                                <img (click)="toggleMostrar()" *ngIf="mostrarYo" [src]="images.img[2]"
                                     class="card-img cursor7 padin20" width="300" height="300">
-                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" src="../../../assets/img/img4.png"
+                                <img (click)="toggleMostrar()" *ngIf="!mostrarYo" [src]="images.img[3]"
                                     class="card-img cursor7 padin20" width="300" height="300">
 
                             </div>
@@ -83,82 +84,17 @@
     <h3 class="colorTexto10 text-uppercase font-weight-bold mt-5 text-left">
         Últimas publicaciones
     </h3>
-    <div (click)="mostrarNoticia()" class="container text-center mt-3 cursor7">
+    <div *ngFor="let new of lastNews" (click)="mostrarNoticia(new)" class="container text-center mt-3 cursor7">
         <ul class="list-unstyled backUltimas30 pt-4 pl-4 pr-4 mt-1 text-justify">
-            <li class="backNoti34 mb-4" data-toggle="tooltip" data-placement="top" title="Abrir">
+            <li class="backNoti34 mb-4">
                 <div class="media-body">
                     <h6 class="mb-1">
-                        <img src="../../../assets/img/img1.png" class="tamanoYo31 rounded-circle mr-4 backImgNoti32">
-                        <span class="font-weight-normal backTituloNoti35">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.
-                            Ducimus,
-                            ad!</span>
+                        <img [src]="new.img_author | imgAuthor" class="tamanoYo31 rounded-circle mr-4 backImgNoti32">
+                        <span class="font-weight-normal backTituloNoti35">{{ new.title }}</span>
                     </h6>
-                    <span class="colorNoti33">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum asperiores pariatur vitae
-                        nostrum quia
-                        fugit, minima alias quod veritatis repudiandae tempora! Sequi est fuga quis aperiam aspernatur.
-                        Quaerat vel
-                        iusto quod eveniet rem obcaecati, vitae inventore animi explicabo magnam quas expedita itaque
-                        laudantium
-                        repellendus praesentium impedit reiciendis dolor id quos libero? Dolores modi dolorem
-                        consequatur
-                        cupiditate.
-                    </span>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <div (click)="mostrarNoticia()" class="container text-center mt-3 cursor7">
-        <ul class="list-unstyled backUltimas30 pt-4 pl-4 pr-4 mt-1 text-justify">
-            <li class="backNoti34 mb-4" data-toggle="tooltip" data-placement="top" title="Abrir">
-                <div class="media-body">
-                    <h6 class="mb-1">
-                        <img src="../../../assets/img/img1.png" class="tamanoYo31 rounded-circle mr-4 backImgNoti32">
-                        <span class="font-weight-normal backTituloNoti35">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.
-                            Ducimus,
-                            ad!</span>
-                    </h6>
-                    <span class="colorNoti33">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum asperiores pariatur vitae
-                        nostrum quia
-                        fugit, minima alias quod veritatis repudiandae tempora! Sequi est fuga quis aperiam aspernatur.
-                        Quaerat vel
-                        iusto quod eveniet rem obcaecati, vitae inventore animi explicabo magnam quas expedita itaque
-                        laudantium
-                        repellendus praesentium impedit reiciendis dolor id quos libero? Dolores modi dolorem
-                        consequatur
-                        cupiditate.
-                    </span>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <div (click)="mostrarNoticia()" class="container text-center mt-3 cursor7">
-        <ul class="list-unstyled backUltimas30 pt-4 pl-4 pr-4 mt-1 text-justify">
-            <li class="backNoti34 mb-4" data-toggle="tooltip" data-placement="top" title="Abrir">
-                <div class="media-body">
-                    <h6 class="mb-1">
-                        <img src="../../../assets/img/img1.png" class="tamanoYo31 rounded-circle mr-4 backImgNoti32">
-                        <span class="font-weight-normal backTituloNoti35">Lorem ipsum dolor, sit amet consectetur
-                            adipisicing elit.
-                            Ducimus,
-                            ad!</span>
-                    </h6>
-                    <span class="colorNoti33">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum asperiores pariatur vitae
-                        nostrum quia
-                        fugit, minima alias quod veritatis repudiandae tempora! Sequi est fuga quis aperiam aspernatur.
-                        Quaerat vel
-                        iusto quod eveniet rem obcaecati, vitae inventore animi explicabo magnam quas expedita itaque
-                        laudantium
-                        repellendus praesentium impedit reiciendis dolor id quos libero? Dolores modi dolorem
-                        consequatur
-                        cupiditate.
-                    </span>
+                    <p class="colorNoti33">
+                        {{ new.paragraph1.substr(0, 300) }}...
+                    </p>
                 </div>
             </li>
         </ul>

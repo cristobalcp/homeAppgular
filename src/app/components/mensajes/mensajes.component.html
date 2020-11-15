@@ -1,1 +1,37 @@
-<p>mensajes works!</p>
+<div class="container marginContainer49">
+    <h3 class="ultimas text-uppercase font-weight-bold mt-5 text-left">
+      <span class="colorTexto10">Mensajes</span>
+    </h3>
+  
+    <div *ngFor="let message of messagesEmail; let i = index;" class="container text-center mt-3">
+      <ul class="list-unstyled backUltimas30 pt-4 pl-4 pr-4 mt-1 text-justify">
+  
+        <li class="text-left">
+          <span class="mr-3 colorTexto40">{{ message.created | date: 'fullDate'}}</span>
+          <span>
+            <small class="colorTexto40">{{ message.created | date: 'shortTime'}}</small>
+          </span>
+        </li>
+        <li class="backMensajes47 mb-5">
+          <div class="media-body">
+            <h6 class="mb-1">
+              <img src="../../../assets/img/email.jpg" class="tamanoYo31 rounded-circle mr-2 backImgNoti32">
+              <span class="backTituloNoti35">{{ message.email }}</span>
+              <a href="mailto:prueba1@esprueba.co.uk" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-reply ml-4 colorTexto10 cursor7"></i>
+              </a>
+              <span (click)="deleteMessage(message)">
+                <i class="far fa-trash-alt ml-4 colorTexto10 cursor7"></i>
+              </span>
+            </h6>
+            <span class="colorNoti33">
+              {{ message.message }}
+            </span>
+            <div class="text-center">
+              <span class="colorTexto10 mr-3">{{ i+1 }}/{{ messagesEmail.length }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

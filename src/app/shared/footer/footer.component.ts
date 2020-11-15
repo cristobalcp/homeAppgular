@@ -56,6 +56,4 @@ export class FooterComponent implements OnInit {
       $('#alerta').modal();
     }, 500);
   }
-
-
 }

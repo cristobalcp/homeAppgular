@@ -40,7 +40,7 @@ export class ModalService {
     setTimeout(() => {
       $('input[type="checkbox"]').prop('checked', false);
       this.privacidadSeleccionada = true;
-    }, 100);
+    }, 500);
 
     $('#alerta').modal('hide');
 

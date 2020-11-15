@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
+import { UserService } from 'src/app/services/user.service';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
@@ -18,10 +19,13 @@ export class ModalsComponent implements OnInit {
   }
   
   usuarioLogin = {
-    nombre: 'cristobalcpl',
-    password: '123'
+    nombre: 'ccenalmor',
+    password: 'abc123'
   }
-  constructor(public modalService: ModalService) {
+  constructor(
+    public modalService: ModalService,
+    public userService : UserService
+    ) {
     this.modalService.privacidadSeleccionada = true;
   }
 
@@ -75,19 +79,25 @@ export class ModalsComponent implements OnInit {
     this.mensaje.email = "";
     this.mensaje.mensaje = "";
   }
-  login(forma: NgForm) {
 
-    if (this.usuarioLogin.nombre === 'cristobalcpl' && this.usuarioLogin.password === '123') {
+  async login(forma: NgForm) {
+    if(forma.invalid) this.salirLogin();
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000
+    });
+    const usuarioValido = await this.userService.login(this.usuarioLogin.nombre, this.usuarioLogin.password); 
+    
+    if (usuarioValido) {
+      this.salirLogin();
+      this.userService.auth = true;
+      
       // Alerta login correcto
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top',
-        showConfirmButton: false,
-        timer: 3000
-      });
-
       Toast.fire({
-        title: this.usuarioLogin.nombre + ' online',
+        title: `${this.usuarioLogin.nombre} online`,
         background: 'rgb(23, 191, 99)',
         icon: 'success'
       });
@@ -96,28 +106,20 @@ export class ModalsComponent implements OnInit {
       this.modalService.online = true;
 
     } else {
-      // Alerta login incorrecto
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top',
-        showConfirmButton: false,
-        timer: 3000
-      });
-
       Toast.fire({
         title: 'Invalid credentials',
         background: 'rgb(23, 191, 99)',
         icon: 'error'
       });
     }
-
-    this.salirLogin();
     $('.navbar-collapse').collapse('hide');
     this.limpiarUsuario();
   }
+  
   salirLogin(){
     $('#loginModal').modal('hide');
   }
+
   limpiarUsuario() {
     this.usuarioLogin.nombre = "";
     this.usuarioLogin.password = "";

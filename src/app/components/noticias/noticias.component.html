@@ -1,1 +1,35 @@
-<p>noticias works!</p>
+<div class="container marginContainer49">
+    <h3 class="text-uppercase font-weight-bold text-left">
+        <span class="colorTeto10">Noticias Cristóbal</span>
+    </h3>
+    <div class="container mt-3">
+        <div class="container backPaginaNoticias36">
+            <div class="row">
+                <div (click)="mostrarNoticia(singleNew)" *ngFor="let singleNew of news" class="col-12 col-md-4 col-lg-3 mb-3 cursor7">
+                    <div class="card backNoticias37">
+                        <img [src]='singleNew.img_new | imgNew ' class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title backNoticias38">{{ singleNew.title }}</h5>
+                            <p class="card-text sub41">{{ singleNew.subtitle }}</p>
+                            <p class="card-text"><small class="colorTexto40">{{ singleNew.created | date: 'longDate' }}</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <button [disabled]="noticiasService.page === 1" (click)="restar()" type="button" class="btn btn-warning backPlus39 backPlus40 mr-5">
+                            <i class="fas fa-minus colorIcon43"></i>
+                        </button>
+                        <span class="badge badge-pill badge-warning text-uppercase">página {{ noticiasService.page }}</span>
+                        <button [disabled]="!pageLenght" (click)="sumar()" type="button" class="btn btn-warning backPlus39 backPlus40 ml-5">
+                            <i class="fas fa-plus colorIcon43"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

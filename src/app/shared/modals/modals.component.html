@@ -18,17 +18,11 @@
                 privacidad y cookies</small> </label>
           </div>
           <hr>
-          <button *ngIf="modalService.privacidadSeleccionada" type="button" class="btn btn-outline-warning btn-sm"
-            data-dismiss="modal">
-            <span class="colorTexto10">
-              No acepto
-            </span>
+          <button *ngIf="modalService.privacidadSeleccionada" type="button" class="btn btn-sm" data-dismiss="modal">
+            <mat-icon class="colorTexto10">thumb_down</mat-icon>
           </button>
-          <button (click)="contacto()" *ngIf="!modalService.privacidadSeleccionada" type="button"
-            class="btn btn-outline-warning btn-sm">
-            <span class="colorTexto10">
-              Continuar 
-            </span>
+          <button (click)="contacto()" *ngIf="!modalService.privacidadSeleccionada" type="button" class="btn btn-sm">
+            <mat-icon class="colorTexto10">thumb_up</mat-icon>
           </button>
         </div>
       </div>
@@ -44,7 +38,8 @@
       <div class="container backModal12">
         <div class="container text-center mt-3">
           <h3 class="fedeSub colorTexto10"><i class="fas fa-comments">&nbsp;Contacto</i>
-            <button (click)="limpiarMensaje()" type="button" class="close text-right colorTexto10" data-dismiss="modal" aria-label="Close">
+            <button (click)="limpiarMensaje()" type="button" class="close text-right colorTexto10" data-dismiss="modal"
+              aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </h3>
@@ -57,7 +52,7 @@
                   <div class="input-group-text backContacto13"><i class="fas fa-at"></i></div>
                 </div>
                 <input [(ngModel)]="mensaje.email" name="email" type="email" class="form-control backInput14"
-                   placeholder="Destinatario..." required autocomplete="off" id="focusInput">
+                  placeholder="Destinatario..." required autocomplete="off" id="focusInput">
               </div>
             </div>
             <div class="form-group">
@@ -70,7 +65,7 @@
               </div>
             </div>
             <div class="text-center">
-              <input type="submit" value="ENVIAR" class="btn btn-success btn-block rounded-0 py-2">
+              <button mat-flat-button color="link" type="submit">Enviar</button>
             </div>
           </form>
         </div>

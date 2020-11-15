@@ -6,12 +6,18 @@
   --main-bg-color: rgb(255, 255, 255);
   --main-bg-color-low: rgba(255, 255, 255, 0.5);
   --main-bg-color-extra-low: rgba(255, 255, 255, 0.2);
-
+}
+html,
+body {
+  height: 100%;
 }
 body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
   background-color: var(--main-bg-color);
-  margin-top: 100px;
-  margin-bottom: 110px;
   min-height: 500px;
   font-size: 14px;
   line-height: 1.5;
@@ -49,7 +55,7 @@ html {
 }
 
 .badge-warning,
-.btn-warning{
+.btn-warning {
   background-color: var(--main-color) !important;
   color: var(--main-bg-color);
 }
@@ -204,7 +210,7 @@ html {
 }
 
 .backTec23 {
-  background-color: var(--main-color-extra-low)  ;
+  background-color: var(--main-color-extra-low);
   border: 2px groove var(--main-color);
 }
 
@@ -218,7 +224,7 @@ html {
 }
 
 .colorTec25 {
-  background-color: transparent  !important;
+  background-color: transparent !important;
   color: var(--main-color);
 }
 
@@ -227,12 +233,12 @@ html {
   color: var(--main-color) !important;
 }
 
-.colorFooter27{
+.colorFooter27 {
   background-color: var(--main-bg-color);
   color: var(--main-color);
 }
 
-.boldTexto28{
+.boldTexto28 {
   font-weight: 800;
 }
 
@@ -241,7 +247,7 @@ html {
 }
 
 .backUltimas30 {
-  background-color:  var(--main-color-extra-low) !important;
+  background-color: var(--main-color-extra-low) !important;
   color: var(--main-color);
   border: 1px inset var(--main-color);
   border-radius: 10px;
@@ -254,12 +260,13 @@ html {
 
 @media (max-width: 767px) {
   .tamanoYo31 {
-  width: 30px;
-  height: 30px;
- }
- .colorNoti33, .font-weight-normal {
-  font-size: 12px !important;
-}
+    width: 30px;
+    height: 30px;
+  }
+  .colorNoti33,
+  .font-weight-normal {
+    font-size: 12px !important;
+  }
 }
 
 .backImgNoti32 {
@@ -280,11 +287,106 @@ html {
 
 .backNoti34:hover {
   background-color: var(--main-bg-color-low);
-  border: 2px solid  var(--main-color-low);
+  border: 2px solid var(--main-color);
 }
 
 .backTituloNoti35 {
   background-color: var(--main-bg-color-extra-low);
   color: var(--main-color);
   font-weight: bold;
+}
+
+.backPaginaNoticias36 {
+  background-color: var(--main-color-extra-low) !important;
+  color: var(--main-color);
+  border: 3px inset var(--main-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.backNoticias37 {
+  background-color: var(--main-bg-color);
+  border: 1px double var(--main-color-extra-low);
+  border-radius: 2px;
+  padding: 10px !important;
+}
+
+.backNoticias37:hover {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-color);
+}
+
+.backNoticias38 {
+  background-color: var(--main-color-extra-low) !important;
+  color: var(--main-color);
+  border: 2px inset var(--main-color);
+  font-size: 12.5px;
+}
+
+.backPlus39 {
+  color: black !important;
+}
+
+.backPlus40 {
+  background-color: var(--main-color-extra-low);
+  border: 2px solid var(--main-color);
+}
+
+.sub41 {
+  font-size: 12.3px;
+}
+
+.colorTexto42 {
+  color: var(--main-color);
+}
+
+.colorIcon43 {
+  color: var(--main-bg-color) !important;
+}
+
+.backNoticiaCompleta44 {
+  background-color: var(--main-color-extra-low);
+  border: 1px solid var(--main-color-extra-low);
+  border-radius: 10px;
+  padding: 20px !important;
+}
+
+.backNoticiaCompleta45 {
+  background-color: var(--main-color-extra-low) !important;
+  color: var(--main-color);
+  border: 1px inset var(--main-color);
+}
+
+.backPaginaNoticiaCompleta46 {
+  background-color: var(--main-color-extra-low) !important;
+  color: var(--main-color);
+  border: 1px inset var(--main-color);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.backMensajes47 {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-color-low);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.spacer48{
+  flex: 1 1 auto;
+}
+
+.marginContainer49{
+  margin-top: 80px;
+}
+
+.test{
+  background-color: var(--main-bg-color);
+  color: black;
+
+}
+
+.test1{
+  background-color: white;
+  cursor: pointer;
 }
